@@ -5,7 +5,7 @@ y2.setAttribute("durum","pasif");
 y2.setAttribute("id","butbut");
 y2.style.border="none";
 y2.innerHTML="Analiz Göster!";
-y2.style.backgroundColor="#4CAF50";
+y2.style.backgroundColor="#2a6fb6";
 y2.style.color="white";
 y2.style.marginLeft="8px"
 y2.style.width="7rem"
@@ -61,6 +61,8 @@ function fonk(){
 		for (i=3;i<=7;i++){
 			document.getElementsByTagName("p")[i].style.backgroundColor="#ff9800";
 			document.getElementsByTagName("p")[i].style.textAlign="center";
+			document.getElementsByTagName("p")[i].style.borderRadius="4px";
+
 			//iş bitti
 	}
 	}
