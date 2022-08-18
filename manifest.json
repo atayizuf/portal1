@@ -1,0 +1,13 @@
+{
+  "name": "portal1",
+  "description": "portalicinv2",
+  "version": "2.0",
+  "manifest_version": 3,
+  "author": "Ufuk Açıkgöz",
+  "content_scripts":[
+    {
+      "matches":["https://www.oddsportal1.com/matches/soccer/*"],
+      "js":["portalv101.js"]
+    }
+  ]
+}
