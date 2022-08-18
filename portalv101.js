@@ -1,6 +1,22 @@
-let y1=document.getElementsByClassName("cms")[1];
+let kul = document.getElementById("user-header-r2");
+let a1=kul.getAttribute("action");
+if (a1==="/") {
+    console.log("kullanıcı giriş yapmamış.");
+    var y1=document.getElementsByClassName("cms")[1];
+    //kullanıcı giriş yapmadığında bu kısım kullanılacak.
+}
+else {
+    var y1=document.getElementsByClassName("cms")[1];
+    //kullanıcı giriş yaptığında...
+}
 y1.children[0].appendChild(document.createElement("button"));
-let y2=document.getElementsByTagName("button")[0]
+
+if (a1==="/") {
+	var y2=document.getElementsByTagName("button")[2]; //diğer durumda 
+}
+else {
+	var y2=document.getElementsByTagName("button")[0]; //diğer durumda 0
+}
 y2.setAttribute("durum","pasif");
 y2.setAttribute("id","butbut");
 y2.style.border="none";
@@ -10,7 +26,6 @@ y2.style.color="white";
 y2.style.marginLeft="8px"
 y2.style.width="7rem"
 y2.style.borderRadius="2rem"
-
 y2.addEventListener("click", fonk);
 //y2.addEventListener("click", sakla);
 function fonk(){
@@ -66,9 +81,6 @@ function fonk(){
 			//iş bitti
 	}
 	}
-
-
-
 	else if (y2.getAttribute("durum")==="aktif"){
 		for (i=3;i<=7;i++){
 			document.getElementsByTagName("p")[3].remove();
@@ -77,6 +89,4 @@ function fonk(){
 		y2.setAttribute("durum","pasif");
 		y2.innerHTML="Analiz Göster!";
 	}
-}
-function sakla(){
 }
