@@ -77,5 +77,4 @@ function fonk(){
 	}
 }
 function sakla(){
-	
 }
