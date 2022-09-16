@@ -17,15 +17,17 @@ if (a1==="/") {
 else {
 	var y2=document.getElementsByTagName("button")[0]; //diğer durumda 0
 }
-y2.setAttribute("durum","pasif");
+// div sil - divlerle tablo oluştur.
+y2.setAttribute("durum", "pasif");
 y2.setAttribute("id","butbut");
+y2.style.outline="none"
 y2.style.border="none";
 y2.innerHTML="Analiz Göster!";
 y2.style.backgroundColor="#2a6fb6";
 y2.style.color="white";
 y2.style.marginLeft="8px"
 y2.style.width="7rem"
-y2.style.borderRadius="2rem"
+y2.style.borderRadius="5px"
 y2.addEventListener("click", fonk);
 //y2.addEventListener("click", sakla);
 function fonk(){
@@ -60,7 +62,12 @@ function fonk(){
 		t2="2.5 Üst olan maç sayısı:\t"+ust.length+"\t\t%"+yuzdeust.toFixed(2);
 		t3="2.5 Alt olan maç sayısı:\t"+alt.length+"\t\t%"+yuzdealt.toFixed(2);
 		t4="Ertelenen veya Başına bir iş gelen maç sayısı:\t"+nan.length+"\t\t%"+yuzdenan.toFixed(2);
-		t5="Toplam maç sayısı: "+tumu.length+"\t\t("+nan.length+" Maç Yüzde hesabından çıkarılmıştır...)";
+		if (nan.length==0){ 
+			t5="Toplam maç sayısı: "+tumu.length;
+		}
+		else{
+			t5="Toplam maç sayısı: "+tumu.length+"\t\t("+nan.length+" Maç Yüzde hesabından çıkarılmıştır...)";
+		}
 		let m1=document.getElementsByClassName("cms");
 		const e1 = document.createElement("p");
 		const e2 = document.createElement("p");
