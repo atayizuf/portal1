@@ -40,10 +40,10 @@ function fonk(){
 		let ust=[];
 		let alt=[];
 		let nan=[];
-		// 'canc.','1:0 pen.'
+		// 'canc.','1:0 pen.','abn.'
 		// && scores[i].innerHTML.split(':')[1].substring(1)==null  --  && scores[i].children.length==0
 		for (i=0; i<scores.length;i++){
-			if(scores[i].innerHTML!='canc.' && scores[i].innerHTML!='postp.' && scores[i].innerText.split(':')[1].length<3 && scores[i].children.length==0){
+			if(scores[i].innerHTML!='abn.' && scores[i].innerHTML!='canc.' && scores[i].innerHTML!='postp.' && scores[i].innerText.split(':')[1].length<3 && scores[i].children.length==0){
 				// scores[i].parentElement.childNodes[1].innerHTML=scores[i].parentElement.childNodes[1].innerHTML+'<span class="ufuk" style="color: white;margin-left: 5px;width: 8px;background-color: red;height: 8px;display: inline-flex;border-radius: 50%;"></span>';
 				// scores[i].style.backgroundColor="#80B62A";
 				// scores[i].style.color="white";
